@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="1"
+    android:padding="16dp"
+    android:rowCount="3"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/queryEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="fill_horizontal"
+        android:hint="Enter Twitter search query here"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_column="0"
+        android:layout_row="2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tagEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_save" />
+
+    </LinearLayout>
+
+</GridLayout>
