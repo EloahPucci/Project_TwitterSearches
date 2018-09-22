@@ -27,20 +27,47 @@
 
         <EditText
             android:id="@+id/tagEditText"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="bottom|fill_horizontal"
             android:layout_weight="1"
-            android:ems="10"
+            android:ems="0"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:imeOptions="actionDone"
+            android:hint="@string/tagPrompt" />
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:contentDescription="@string/saveDescription"
             android:src="@android:drawable/ic_menu_save" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_marginTop="50dp"
+        android:layout_row="2"
+        android:background="@android:color/holo_blue_bright"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:gravity="fill"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:layout_marginBottom="@dimen/tagged_searches_padding"
+            android:layout_marginTop="@dimen/tagged_searches_padding"
+            android:layout_weight="1"
+            android:paddingTop="16dp" />
     </LinearLayout>
 
 </GridLayout>
